@@ -32,7 +32,10 @@ body {
   background: #fff;
   border-radius: 2rem;
   max-width: 56rem;
-  margin: ;
+}
+
+.card__box {
+  display: none;
 }
 
 .card__image img {
@@ -43,17 +46,37 @@ body {
 
 @media (min-width: 56em) {
   .card {
+    position: relative;
     display: flex;
     margin: 6rem auto;
     padding-right: 2rem;
     background-image: url("images/bg-pattern-desktop.svg");
-    background-size: cover;
+    background-size: 45%;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: -13% center;
+  }
+
+  .card__box {
+    display: block;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    top: 57%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   .card__image,
   .card__text {
     flex: 1;
+  }
+
+  .card__image {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .card__image img {
+    transform: translateX(-4rem);
   }
 }
