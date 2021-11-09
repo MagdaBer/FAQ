@@ -23,7 +23,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  padding: 3rem;
+  padding: 10rem 1rem;
   font-family: "Kumbh Sans", sans-serif;
   background: linear-gradient(var(--gradient-violet), var(--gradient-bue));
 }
@@ -32,27 +32,48 @@ body {
   background: #fff;
   border-radius: 2rem;
   max-width: 56rem;
+  background-image: url("images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center 0%;
+  background-size: 15rem;
 }
 
 .card__box {
   display: none;
 }
 
+.card__image {
+  position: relative;
+}
 .card__image img {
+  position: absolute;
+  top: -6.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
   width: 100%;
   height: auto;
-  max-width: 25rem;
+  max-width: 15rem;
+  margin: auto;
+}
+
+.card__text {
+  padding-top: 7rem;
 }
 
 @media (min-width: 56em) {
+  body {
+    padding: 5rem;
+  }
+
   .card {
     position: relative;
     display: flex;
-    margin: 6rem auto;
+    margin: 0 auto;
     padding-right: 2rem;
     background-image: url("images/bg-pattern-desktop.svg");
     background-size: 45%;
-    background-repeat: no-repeat;
+
     background-position: -13% center;
   }
 
@@ -78,5 +99,12 @@ body {
 
   .card__image img {
     transform: translateX(-4rem);
+    max-width: 25rem;
+    top: auto;
+    left: auto;
+  }
+
+  .card__text {
+    padding-top: 0;
   }
 }
