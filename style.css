@@ -26,12 +26,20 @@ body {
   padding: 10rem 1rem;
   font-family: "Kumbh Sans", sans-serif;
   background: linear-gradient(var(--gradient-violet), var(--gradient-bue));
+  color: var(--text-blue);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
 }
 
 .card {
   background: #fff;
   border-radius: 2rem;
   max-width: 56rem;
+  padding: 2.875rem 1.5rem 2.875rem 1.5rem;
   background-image: url("images/bg-pattern-mobile.svg");
   background-repeat: no-repeat;
   background-position: center 0%;
@@ -61,6 +69,46 @@ body {
   padding-top: 7rem;
 }
 
+.accordion__items {
+  padding-top: 1rem;
+  border-bottom: 1px solid var(--divider-blue);
+}
+
+.accordion__item h2 {
+  margin-bottom: 0;
+}
+.accordion__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  border: none;
+  background: transparent;
+  margin-bottom: 1rem;
+  padding: 0;
+  font-size: 0.875rem;
+  font-family: "Kumbh Sans", sans-serif;
+  text-align: left;
+}
+
+.accordion__question::after {
+  content: "";
+  display: block;
+  width: 0.625rem;
+  height: 1rem;
+  background-image: url(/images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.accordion__content {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 56em) {
   body {
     padding: 5rem;
@@ -70,7 +118,7 @@ body {
     position: relative;
     display: flex;
     margin: 0 auto;
-    padding-right: 2rem;
+    padding-right: 4.375rem 6.25rem 4.375rem 0;
     background-image: url("images/bg-pattern-desktop.svg");
     background-size: 45%;
 
